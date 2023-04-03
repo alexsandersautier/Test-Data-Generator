@@ -32,19 +32,23 @@ def generate_states(save):
     print(generate_random(state))
     generate_file(save,generate_random(state))
 
+#finish program
 def exit_app():
     print('Closing the program')
     print('©Sautier Alexsander\n')
     os._exit(0)
 
+#to generate random option
 def generate_random(option):
     return random.choice(option)
 
+#to generate file txt
 def generate_file(save,option):
     if save == 'y':
         with open('data.txt', 'a', newline='') as file:
             file.write(option + os.linesep)            
 
+#create menu
 def main(option, save):
     if option == 'stop':
         exit_app()
@@ -61,6 +65,7 @@ def main(option, save):
     else:
         print('\nwrong option\n')           
 
+#program
 while True:
     print('--------------------------------------')
     print('Welcome to Test Data Generator - For finish program, type "stop"')
